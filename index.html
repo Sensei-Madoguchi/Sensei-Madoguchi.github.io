@@ -4,12 +4,12 @@ title: 学校教員のための一次受けサポートデスク
 subtitle: 
 ---
 
-<!-- Modal -->
+<!-- Modal1 -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">先生の窓口</h5>
+        <h5 class="modal-title" id="exampleModalLabel">ご紹介動画</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -30,6 +30,33 @@ subtitle:
   </div>
 </div>
 
+<!-- Modal2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">サービス詳細</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="embed-responsive embed-responsive-16by9">
+          <!-- YouTube動画のiframe -->
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EQdds7IzECQ?si=B-9FM8gKlJtROwPv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
 <div class="jumbotron mt-3">
   <h1 class="display-5 text-white">保護者対応に追われていませんか？</h1>
   <!-- <p class="lead">受付体制を改善すれば、きっと効率的で質の高いものになります。</p> -->
@@ -38,8 +65,12 @@ subtitle:
 
 	<!-- Button trigger modal -->
 	<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
-	  紹介動画はこちら
+	  ご紹介動画
 	</button>
+
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+    サービス詳細
+  </button>
 
   <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
 </div>
