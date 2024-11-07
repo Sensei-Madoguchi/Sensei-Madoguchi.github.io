@@ -2,6 +2,23 @@
   <div class="container-md beautiful-jekyll-footer">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+
+      <form>
+        <h2>お問合せ</h2>
+        <p>より詳しい説明を伺いたい方は、お気軽にお問合せください。打ち合わせの日程調整をさせていただきます。</p>
+        <div class="row">
+          <div class="col">
+            <label for="schoolName">学校名</label>
+            <input type="text" class="form-control form-control-lg" id="schoolName", placeholder="学校名">
+          </div>
+          <div class="col">
+            <label for="inputEmail">Eメールアドレス</label>
+            <input type="email" class="form-control form-control-lg" id="inputEmail" aria-describedby="emailHelp" placeholder="電話番号でも構いません">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg my-3">送信する</button>
+      </form>
+
       {% include social-networks-links.html %}
       {% if page.footer-extra %}
         <div class="footer-custom-content">

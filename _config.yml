@@ -22,7 +22,7 @@ author: 先生の窓口
 navbar-links:
   運営チーム: "aboutus"
   料金: "pricing"
-  お問合せ: "contact"
+  # お問合せ: "contact"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
   #   - Learn markdown: "https://www.markdowntutorial.com/"
