@@ -3,21 +3,30 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
 
-      <form>
+      <form id="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdA21tpSVDC5tA75aOg7tRQ6akmONFyq7cERpqrqG0ne9wArg/formResponse" method="POST" target="thanksIframe">
         <h2>お問合せ</h2>
         <p>より詳しい説明を伺いたい方は、お気軽にお問合せください。打ち合わせの日程調整をさせていただきます。</p>
         <div class="row">
           <div class="col">
-            <label for="schoolName">学校名</label>
-            <input type="text" class="form-control form-control-lg" id="schoolName", placeholder="学校名">
+            <label for="inputName">学校名</label>
+            <input type="text" name="entry.1153605540" class="q-required form-control form-control-lg" id="inputName" required>
           </div>
           <div class="col">
             <label for="inputEmail">Eメールアドレス</label>
-            <input type="email" class="form-control form-control-lg" id="inputEmail" aria-describedby="emailHelp" placeholder="電話番号でも構いません">
+            <input type="email" name="entry.513056672" class="q-required form-control form-control-lg" id="inputEmail" aria-describedby="emailHelp" required>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg my-3">送信する</button>
+        <button id="submit-btn" type="submit" name="button" value="送信" class="btn btn-primary btn-lg my-3">送信する</button>
       </form>
+
+      <!-- 完了メッセージ -->
+      <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+          <h2>送信完了しました</h2>
+          <p>お問い合わせいただき、ありがとうございます。</p>
+          <p>折り返しご連絡させていただきますので、しばらくお待ちください。</p>
+      </div>
+
+      <iframe name="thanksIframe" style="display: none;"></iframe>
 
       {% include social-networks-links.html %}
       {% if page.footer-extra %}
@@ -62,3 +71,47 @@
     </div>
   </div>
 </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+$(function () {
+    // 送信ボタンを無効化
+    $('#submit-btn').prop("disabled", true);
+
+    // 必須項目チェック
+    $('.q-required').change(function () {
+        let flag = true;
+
+        // 値が入っていない場合はフラグをfalseにする
+        $('.q-required').each(function (e) {
+            if ($('.q-required').eq(e).val() === "") {
+                flag = false;
+            }
+        });
+
+        // フラグがtrueの場合は送信ボタン有効
+        if (flag) {
+            $('#submit-btn').prop("disabled", false);
+
+            $('#submit-btn').on('click', evt => {
+                $('#contact-form').submit();
+
+                // 完了メッセージを表示
+                $('#successMessage').css('display', 'block');
+
+                // 3秒後に完了メッセージを非表示
+                setTimeout(function () {
+                    $('#successMessage').css('display', 'none');
+                }, 8000);
+
+                // window.location.reload();
+                return false;
+            });
+
+        } else {
+            $('#submit-btn').prop("disabled", true);
+        }
+    });
+});
+</script>
