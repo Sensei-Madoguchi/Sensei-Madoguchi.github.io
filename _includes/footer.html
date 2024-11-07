@@ -77,7 +77,7 @@
 <script>
 $(function () {
     // 送信ボタンを無効化
-    $('#submit-btn').prop("disabled", true);
+    // $('#submit-btn').prop("disabled", true);
 
     // 必須項目チェック
     $('.q-required').change(function () {
@@ -100,7 +100,7 @@ $(function () {
                 // 完了メッセージを表示
                 $('#successMessage').css('display', 'block');
 
-                // 3秒後に完了メッセージを非表示
+                // 8秒後に完了メッセージを非表示
                 setTimeout(function () {
                     $('#successMessage').css('display', 'none');
                 }, 8000);
