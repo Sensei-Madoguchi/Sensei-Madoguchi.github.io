@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 先生の対応をサポートします
-subtitle: 先生が独りで抱え込んでしまわないように
+title: 先生が独りで抱え込んでしまわないように
+subtitle: 先生をサポートします
 cover-img: /assets/img/Support_2_cover.jpg
 thumbnail-img: /assets/img/Support_2.png
 share-img: /assets/img/Support_2.png
